@@ -1,0 +1,28 @@
+{
+  "name": "js-7.6dz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:laptop:headless": "npx cypress run -b chrome -C cypress.config.js",
+    "cy:laptop:headed": "npx cypress run -b edge --headed -C cypress.config.js",
+    "cy:mobile:headless": "npx cypress run -b edge -C cypress2.config.js",
+    "cy:mobile:headed": "npx cypress run -b chrome --headed -C cypress2.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kitsune785/JS-7.6-Cypress-part-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kitsune785/JS-7.6-Cypress-part-1/issues"
+  },
+  "homepage": "https://github.com/Kitsune785/JS-7.6-Cypress-part-1#readme",
+  "dependencies": {
+    "cypress": "^12.0.2"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8"
+  }
+}

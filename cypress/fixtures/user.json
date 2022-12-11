@@ -1,0 +1,8 @@
+{
+"adminEmail": "bropet@mail.ru",
+"adminPassword": "123",
+"userEmail": "test@test.com",
+"userPassword": "test",
+"invalidEmail": "test2@test.com",
+"invalidPassword": "testtest"
+}
