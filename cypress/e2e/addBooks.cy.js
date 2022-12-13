@@ -3,7 +3,7 @@ const bookData = require("../fixtures/book.json")
 
 
 describe('working with adding books', ( )=> {
-    before(() => {
+    beforeEach(() => {
         cy.visit('/');
         cy.login(user.userEmail, user.userPassword);
     });

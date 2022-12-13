@@ -2,14 +2,14 @@ const user = require("../fixtures/user.json")
 const bookData = require("../fixtures/book.json")
 
 describe('working with favorite books', ( )=> {
-    before(() => {
+  beforeEach(() => {
         cy.visit('/');
         cy.login(user.userEmail, user.userPassword);
     });
 
-    it("Should add book to favorite through function 'add new'", () => {
-        cy.addBook(bookData.title1, bookData.description1, bookData.author1, '1')
-        cy.get("input#favorite").click();
+    it.only("Should add book to favorite through function 'add new'", () => {
+        cy.addBook(bookData.title1, bookData.description1, bookData.author1, '1');
+        cy.get('[type="checkbox"]').check().click();
         cy.get('form > .ml-2').click();
         cy.visit("/favorites");
         cy.get(".card-title").should("contain.text", 'название1');
