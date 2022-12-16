@@ -7,7 +7,7 @@ describe('working with favorite books', ( )=> {
         cy.login(user.userEmail, user.userPassword);
     });
 
-    it.only("Should add book to favorite through function 'add new'", () => {
+    it("Should add book to favorite through function 'add new'", () => {
         cy.addBook(bookData.title1, bookData.description1, bookData.author1, '1');
         cy.get('[type="checkbox"]').check().click();
         cy.get('form > .ml-2').click();
@@ -24,8 +24,9 @@ describe('working with favorite books', ( )=> {
       });
 
       it("Should remove all favorite books", () => {
-        cy.addBook(bookData.title1, bookData.description1, bookData.author1, '1')
-        cy.get("input#favorite").click();
+        cy.addBook(bookData.title1, bookData.description1, bookData.author1, '1');
+        cy.get('[type="checkbox"]').check().click();
+        cy.get('form > .ml-2').click();
         cy.removeAllFavorite();
         cy.contains("Please add some book to favorit on home page!").should(
           "exist"
